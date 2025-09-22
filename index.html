@@ -3,438 +3,341 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaik Arshiya Anjum | Gen AI & Cloud Portfolio</title>
+    <title>Shaik Arshiya Anjum | Aspiring Software Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f5f3ff; /* Lighter violet background */
+            background-color: #f0f4f8; /* Light gray-blue background */
+            color: #1e293b; /* Dark slate text */
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .primary-accent {
+            color: #2563eb; /* A nice blue for accents */
+        }
+        .bg-primary-accent {
+             background-color: #2563eb;
+        }
+        .skill-tag {
+            background-color: #e0e7ff;
+            color: #3730a3;
+            font-weight: 500;
         }
         .section-title {
-            @apply text-3xl font-bold text-gray-800 mb-2 text-center relative pb-4;
-        }
-        /* New underline style for section titles */
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(to right, #6366f1, #8b5cf6);
-            border-radius: 2px;
-        }
-        .section-subtitle {
-            @apply text-center text-gray-500 mb-12;
-        }
-        .card {
-            @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden;
-        }
-        .skill-badge {
-            @apply bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full;
-        }
-        .nav-link {
-             @apply text-gray-600 hover:text-indigo-600 font-bold transition-colors duration-300;
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, #ede9fe 0%, #f5f3ff 100%);
-        }
-        .text-gradient {
-            @apply bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent;
-        }
-
-        /* Scroll Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Typed.js Cursor */
-        .typed-cursor {
-            font-size: 2.5rem;
-            color: #4f46e5;
-        }
-        @media (min-width: 768px) {
-            .typed-cursor {
-                font-size: 3.75rem;
-            }
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
         }
     </style>
 </head>
-<body class="text-gray-700">
+<body class="antialiased">
 
-    <!-- Header & Navigation -->
-    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-gray-800">
-                Shaik Arshiya Anjum
-            </a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#experience" class="nav-link">Credentials</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-            <button id="mobile-menu-button" class="md:hidden text-gray-700">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+    <!-- Header -->
+    <header id="header" class="glass-effect fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-800">Arshiya Anjum</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-slate-600 hover:text-blue-600 transition duration-300">About</a>
+                <a href="#skills" class="text-slate-600 hover:text-blue-600 transition duration-300">Skills</a>
+                <a href="#projects" class="text-slate-600 hover:text-blue-600 transition duration-300">Projects</a>
+                <a href="#experience" class="text-slate-600 hover:text-blue-600 transition duration-300">Experience</a>
+                <a href="#contact" class="bg-primary-accent text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300 shadow-lg">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-slate-800 text-2xl">
+                <i class="fas fa-bars"></i>
             </button>
-        </div>
+        </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-             <a href="#about" class="block py-2 nav-link">About</a>
-             <a href="#skills" class="block py-2 nav-link">Skills</a>
-             <a href="#projects" class="block py-2 nav-link">Projects</a>
-             <a href="#experience" class="block py-2 nav-link">Credentials</a>
-             <a href="#contact" class="block py-2 nav-link">Contact</a>
+            <a href="#about" class="block py-2 text-slate-600 hover:text-blue-600">About</a>
+            <a href="#skills" class="block py-2 text-slate-600 hover:text-blue-600">Skills</a>
+            <a href="#projects" class="block py-2 text-slate-600 hover:text-blue-600">Projects</a>
+            <a href="#experience" class="block py-2 text-slate-600 hover:text-blue-600">Experience</a>
+            <a href="#contact" class="block mt-2 bg-primary-accent text-white text-center px-4 py-2 rounded-md hover:bg-blue-700">Contact</a>
         </div>
     </header>
 
-    <main>
+    <main class="pt-24">
         <!-- Hero Section -->
-        <section id="home" class="pt-32 pb-24 hero-gradient">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-3/5 text-center md:text-left">
-                        <p class="text-lg text-indigo-600 font-bold">Shaik Arshiya Anjum</p>
-                        <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight mt-2 min-h-[6rem] md:min-h-[12rem]">
-                           <span id="typed-headline"></span>
-                        </h1>
-                        <p class="mt-6 max-w-2xl text-base text-gray-600">
-                            A passionate and driven student with a strong foundation in Java, Web Technologies, and Machine Learning. Eager to leverage my skills in cloud computing and AI to build innovative solutions that drive efficiency and user satisfaction.
-                        </p>
-                        <div class="mt-8 flex justify-center md:justify-start gap-4">
-                            <a href="#contact" class="bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-indigo-700 transition-all duration-300 shadow-lg hover:shadow-indigo-300">
-                                Contact Me
-                            </a>
-                            <a href="Shaik Arshiya anjum (1).pdf" download="Shaik_Arshiya_Anjum_CV.pdf" class="bg-white text-gray-700 font-semibold px-6 py-3 rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors duration-300">
-                                Download CV
-                            </a>
-                        </div>
-                    </div>
-                    <div class="md:w-2/5 flex justify-center">
-                        <div class="w-80 h-82 md:w-90 md:h-90 rounded-full bg-white shadow-2xl p-2">
-                           <!-- Your photo is now embedded directly -->
-                            <img src="C:\Users\91938\OneDrive\Desktop\portfolio\1.jpg" alt="Shaik Arshiya Anjum" class="rounded-full w-full h-full object-cover">
-                        </div>
-                    </div>
+        <section id="home" class="container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center">
+            <div class="md:w-2/3 text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-900 leading-tight">
+                    Shaik Arshiya Anjum
+                </h1>
+                <p class="text-xl md:text-2xl mt-4 text-blue-600 font-medium">
+                    Aspiring Software Engineer | Data Science Enthusiast
+                </p>
+                <p class="mt-6 text-lg text-slate-600 max-w-xl mx-auto md:mx-0">
+                    Eager to leverage a strong foundation in C/C++, Linux, and Android to contribute to innovative projects in multimedia, wireless modems, and IoT solutions.
+                </p>
+                <div class="mt-8 flex justify-center md:justify-start space-x-6">
+                    <a href="https://github.com/Arshiya02" target="_blank" class="text-3xl text-slate-600 hover:text-blue-600 transition duration-300"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/shaik-arshiya-anjum-281753363" target="_blank" class="text-3xl text-slate-600 hover:text-blue-600 transition duration-300"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:arshiyaanjumshaik5@gmail.com" class="text-3xl text-slate-600 hover:text-blue-600 transition duration-300"><i class="fas fa-envelope"></i></a>
                 </div>
+            </div>
+             <div class="md:w-1/3 mt-10 md:mt-0 flex justify-center">
+                 <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+                    <img src="" alt="Shaik Arshiya Anjum" class="w-full h-full object-cover">
+                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-24">
-            <div class="container mx-auto px-6 reveal">
-                <h2 class="section-title text-gradient">About Me</h2>
-                <p class="section-subtitle">A brief introduction to my background and aspirations.</p>
-                <div class="grid md:grid-cols-5 gap-16 items-center max-w-6xl mx-auto">
-                    <div class="md:col-span-3 text-lg leading-relaxed text-gray-600">
-                         <p>I am currently a B.Tech student at Mohan Babu University with a stellar academic record. My passion lies in harnessing the power of technology to solve complex, real-world problems.</p>
-                         <p class="mt-4">My vision is to contribute to pioneering projects in traffic flow optimization and developing intelligent financial tracking solutions. I thrive in challenging environments and am always looking for opportunities to learn and grow.</p>
-                    </div>
-                    <div class="md:col-span-2">
-                        <div class="space-y-4">
-                             <div class="flex items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                                    <svg class="w-6 h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                                </div>
-                                <div>
-                                    <p class="text-lg font-bold text-indigo-600">9.8 CGPA</p>
-                                    <p class="text-sm font-medium text-gray-500">Stellar Academic Record</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                                    <svg class="w-6 h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 .587l3.668 7.568L24 9.734l-6.332 6.173L19.336 24 12 19.953 4.664 24l1.668-8.093L0 9.734l8.332-1.579L12 .587z"/></svg>
-                                </div>
-                                <div>
-                                    <p class="text-lg font-bold text-indigo-600">Department Topper</p>
-                                    <p class="text-sm font-medium text-gray-500">Top Academic Performer</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                                    <svg class="w-6 h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/><path d="M12 2v2"/></svg>
-                                </div>
-                                <div>
-                                    <p class="text-lg font-bold text-indigo-600">Dance Competition Winner</p>
-                                    <p class="text-sm font-medium text-gray-500">District Level Achievement</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- About Me Section -->
+        <section id="about" class="bg-white py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-slate-900">About Me</h2>
+                <div class="text-center text-lg text-slate-600 max-w-3xl mx-auto">
+                    <p>
+                        I am a dedicated and passionate software engineering student with a CGPA of 9.84 from Mohan Babu University. My core interest lies in the intersection of hardware and software, specifically in embedded systems, real-time software development, and mobile technologies.
+                    </p>
+                    <p class="mt-4">
+                        I thrive on solving complex problems and am proficient in object-oriented design, data structures, and various programming languages. I am driven to create efficient, scalable, and secure software for connected ecosystems, from IoT devices to cutting-edge mobile chipsets.
+                    </p>
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="py-24 bg-indigo-50">
-            <div class="container mx-auto px-6 reveal">
-                <h2 class="section-title text-gradient">Technical Skills</h2>
-                 <p class="section-subtitle">My toolbox for building and analyzing.</p>
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-                    <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-                        <h3 class="font-semibold text-gray-800">Java</h3>
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-slate-900">Technical Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Languages -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-600">Languages</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-1 rounded-full">C</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">C++</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">Java</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">Python</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">SQL</span>
+                        </div>
                     </div>
-                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        <h3 class="font-semibold text-gray-800">Python</h3>
+                    <!-- Core Concepts -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-600">Core Concepts</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-1 rounded-full">Data Structures</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">OS Concepts</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">Linux Kernel Development</span>
+                            
+                        </div>
                     </div>
-                    <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-                        <h3 class="font-semibold text-gray-800">Data Analytics</h3>
+                    <!-- Tools & Technologies -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-600">Tools & Technologies</h3>
+                         <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-1 rounded-full">Linux</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">Android</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">AWS</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">MySQL</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">Git</span>
+                        </div>
                     </div>
-                    <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 100-16 8 8 0 000 16z"/><path d="M12 14a2 2 0 100-4 2 2 0 000 4z"/><path d="M12 2v2"/><path d="M12 22v-2"/><path d="M20 12h2"/><path d="M2 12h2"/><path d="M19.07 4.93l-1.41 1.41"/><path d="M4.93 19.07l-1.41-1.41"/><path d="M19.07 19.07l-1.41-1.41"/><path d="M4.93 4.93l-1.41 1.41"/></svg>
-                        <h3 class="font-semibold text-gray-800">Jenkins</h3>
+                    <!-- Web Development -->
+                     <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-600">Web Development</h3>
+                         <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-1 rounded-full">HTML</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">CSS</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">JavaScript</span>
+                             <span class="skill-tag px-3 py-1 rounded-full">PHP</span>
+                        </div>
                     </div>
-                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05"/><path d="M12 22.08V12"/></svg>
-                        <h3 class="font-semibold text-gray-800">Docker</h3>
+                    <!-- Domains -->
+                     <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-600">Domains</h3>
+                         <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-1 rounded-full">Machine Learning</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">Business Analytics</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">Wireless Protocols (TCP/IP, UDP)</span>
+                        </div>
                     </div>
-                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-                        <h3 class="font-semibold text-gray-800">Tomcat</h3>
-                    </div>
-                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m4.93 19.07 1.41-1.41"/><path d="m17.66 6.34 1.41-1.41"/><circle cx="12" cy="12" r="2"/></svg>
-                        <h3 class="font-semibold text-gray-800">Kubernetes</h3>
-                    </div>
-                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-                        <h3 class="font-semibold text-gray-800">Shell Scripting</h3>
-                    </div>
-                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-                        <h3 class="font-semibold text-gray-800">Bash</h3>
-                    </div>
-                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                        <h3 class="font-semibold text-gray-800">Linux</h3>
-                    </div>
-                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                        <h3 class="font-semibold text-gray-800">Ubuntu</h3>
-                    </div>
-                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
-                        <h3 class="font-semibold text-gray-800">C</h3>
-                    </div>
-                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                        <h3 class="font-semibold text-gray-800">Terraform</h3>
-                    </div>
-                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-                        <h3 class="font-semibold text-gray-800">Excel</h3>
-                    </div>
-                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M4 9h16"/><path d="M8 13h1"/><path d="M8 17h1"/><path d="M12 13h4"/><path d="M12 17h4"/></svg>
-                        <h3 class="font-semibold text-gray-800">PowerPoint</h3>
-                    </div>
-                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-                        <h3 class="font-semibold text-gray-800">Business Analytics</h3>
-                    </div>
-                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
-                        <svg class="h-10 w-10 text-indigo-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V10"/><path d="M12 10l5-3-5-3-5 3 5 3z"/><path d="M12 10l-5 3 5 3 5-3-5-3z"/></svg>
-                        <h3 class="font-semibold text-gray-800">Presentation Skills</h3>
+                    <!-- DevOps & Cloud -->
+                     <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-600">DevOps & Cloud</h3>
+                         <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-1 rounded-full">Docker</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">Kubernetes</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">Jenkins</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">CI/CD</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">Ansible</span>
+                            <span class="skill-tag px-3 py-1 rounded-full">Terraform</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-24">
-            <div class="container mx-auto px-6 reveal">
-                <h2 class="section-title text-gradient">My Projects</h2>
-                <p class="section-subtitle">A selection of my work.</p>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div data-tilt class="card flex flex-col">
-                        <img src="https://placehold.co/600x400/4338ca/ffffff?text=AI+Traffic+Control" alt="Traffic Optimization Project" class="w-full h-48 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Traffic Optimization using ACO</h3>
-                            <p class="mb-4 flex-grow">An AI-driven simulation using Ant Colony Optimization to optimize traffic light timings and minimize vehicle waiting time in a grid network.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="skill-badge">Python</span>
-                                <span class="skill-badge">AI/ML</span>
-                                <span class="skill-badge">SUMO</span>
-                            </div>
-                            <a href="https://github.com/Arshiya02/Traffic-Optimization-using-ACO" target="_blank" rel="noopener noreferrer" class="mt-auto text-indigo-600 font-semibold hover:underline">View on GitHub &rarr;</a>
+        <section id="projects" class="bg-white py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-slate-900">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="text-xl font-bold text-slate-800">Android Kernel Module for IoT</h3>
+                        <p class="text-sm text-gray-500 mb-4">Jan 2024 - Mar 2024</p>
+                        <p class="text-slate-600 flex-grow">Created a custom Linux kernel module to integrate sensors in IoT devices, handling data acquisition and processing with a focus on real-time performance and power management.</p>
+                        <div class="mt-4">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">C/C++</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Linux Kernel</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Device Drivers</span>
                         </div>
                     </div>
-                    <div data-tilt class="card flex flex-col">
-                        <img src="https://placehold.co/600x400/6366f1/ffffff?text=Financial+Tracker" alt="Financial Tracking Website" class="w-full h-48 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">S2S - Financial Tracking Website</h3>
-                            <p class="mb-4 flex-grow">A web-based platform designed to help users manage budgets and track expenses with intuitive visualizations and analytics.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="skill-badge">PHP</span>
-                                <span class="skill-badge">MySQL</span>
-                                <span class="skill-badge">HTML/CSS</span>
-                            </div>
-                             <a href="https://github.com/Arshiya02/s2s-expensetracker" target="_blank" rel="noopener noreferrer" class="mt-auto text-indigo-600 font-semibold hover:underline">View on GitHub &rarr;</a>
+                    <!-- Project Card 2 -->
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="text-xl font-bold text-slate-800">Multimedia Audio Codec Optimizer</h3>
+                        <p class="text-sm text-gray-500 mb-4">Sep 2023 - Nov 2023</p>
+                        <p class="text-slate-600 flex-grow">Developed an optimized audio codec in C for real-time processing on embedded platforms, significantly reducing latency and improving compression for mobile applications.</p>
+                        <div class="mt-4">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">C</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Android</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Multimedia</span>
+                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">OS Concepts</span>
                         </div>
                     </div>
-                    <div data-tilt class="card flex flex-col">
-                         <img src="https://placehold.co/600x400/818cf8/ffffff?text=DSA+Game" alt="DSA Adventure Land Project" class="w-full h-48 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">DSA Adventure Land</h3>
-                            <p class="mb-4 flex-grow">An educational game designed to teach children fundamental Data Structures and Algorithms concepts through engaging visual examples.</p>
-                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="skill-badge">Game Design</span>
-                                <span class="skill-badge">Education Tech</span>
-                            </div>
-                            <a href="https://github.com/Arshiya02/DSA-Adventure-Land" target="_blank" rel="noopener noreferrer" class="mt-auto text-indigo-600 font-semibold hover:underline">View on GitHub &rarr;</a>
+                    <!-- Project Card 3 -->
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="text-xl font-bold text-slate-800">BLE Device Simulator</h3>
+                        <p class="text-sm text-gray-500 mb-4">June 2023 - Aug 2023</p>
+                        <p class="text-slate-600 flex-grow">Built a simulation tool for Bluetooth Low Energy connectivity in IoT devices using C++ in a Linux environment, implementing discovery, pairing, and data transmission protocols.</p>
+                        <div class="mt-4">
+                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">C++</span>
+                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Linux</span>
+                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Wireless Protocols</span>
+                        </div>
+                    </div>
+                    <!-- Project Card 4 -->
+                     <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="text-xl font-bold text-slate-800">Traffic Optimization using ACO</h3>
+                        <p class="text-sm text-gray-500 mb-4">Jan 2022 - Apr 2022</p>
+                        <p class="text-slate-600 flex-grow">Engineered a real-time traffic system using Ant Colony Optimization in Python. Leveraged SUMO for simulation to reduce congestion in urban networks.</p>
+                        <div class="mt-4">
+                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
+                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Machine Learning</span>
+                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">AI</span>
+                        </div>
+                    </div>
+                    <!-- Project Card 5 -->
+                     <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="text-xl font-bold text-slate-800">Financial Tracking Website</h3>
+                        <p class="text-sm text-gray-500 mb-4">Oct 2023 - Dec 2023</p>
+                        <p class="text-slate-600 flex-grow">Created a user-friendly financial tracking website to help users manage budgets and track expenses with charts and analytics, deployed on AWS for scalability.</p>
+                        <div class="mt-4">
+                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">HTML/CSS/JS</span>
+                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">PHP/MySQL</span>
+                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">AWS</span>
+                        </div>
+                    </div>
+                    <!-- Project Card 6 -->
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="text-xl font-bold text-slate-800">DSA Adventure Land</h3>
+                        <p class="text-sm text-gray-500 mb-4">Personal Project</p>
+                        <p class="text-slate-600 flex-grow">A fun, interactive game designed to teach basic Data Structures and Algorithms concepts to children through real-world examples and visualizations.</p>
+                         <div class="mt-4">
+                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">HTML/CSS</span>
+                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">JavaScript</span>
+                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">PHP/MySQL</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Experience & Certifications -->
-        <section id="experience" class="py-24 bg-indigo-50">
-            <div class="container mx-auto px-6 reveal">
-                <h2 class="section-title text-gradient">Credentials</h2>
-                <p class="section-subtitle">My professional experience and certifications.</p>
-                <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                    <!-- Experience -->
-                    <div>
-                        <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center md:text-left">Experience</h3>
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <h4 class="text-xl font-bold text-indigo-700">MI Intern</h4>
-                            <p class="text-gray-600 font-medium mb-1">Suvidha Foundation</p>
-                            <p class="text-sm text-gray-500 mb-2">Mar 2024 - Apr 2024</p>
-                            <p>Contributed to the entire data pipeline, including data collection, preprocessing, and the selection of preferred machine learning models.</p>
+         <!-- Experience Section -->
+        <section id="experience" class="py-20">
+             <div class="container mx-auto px-6">
+                <h2 class="section-title text-slate-900">Experience</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-800">ML Intern</h3>
+                                <p class="text-lg font-medium text-blue-600">Suvidha Foundation</p>
+                            </div>
+                            <p class="text-md text-gray-500">May 2024 - Present</p> <!-- Corrected Date -->
                         </div>
-                    </div>
-                    <!-- Certifications -->
-                    <div>
-                         <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center md:text-left">Certifications</h3>
-                        <ul class="space-y-4 bg-white p-6 rounded-lg shadow-md">
-                           <li class="flex items-start">
-                                <svg class="w-6 h-6 text-indigo-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="font-semibold">AWS Data Engineer</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-6 h-6 text-indigo-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="font-semibold">Google Cloud Digital Leader</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-6 h-6 text-indigo-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="font-semibold">SQL For Data Analytics</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-6 h-6 text-indigo-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="font-semibold">Business Analytics</span>
-                            </li>
+                        <ul class="mt-4 list-disc list-inside text-slate-600 space-y-2">
+                            <li>Collaborated on real-time data handling , optimizing algorithms for efficiency in resource-constrained environments.</li>
+                            <li>Contributed to software integration tasks, enhancing system performance through debugging and testing in Linux-based platforms.</li>
+                            <li>Assisted in data collection and pre-processing for machine learning models.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-24">
-            <div class="container mx-auto px-6 text-center reveal">
-                 <h2 class="section-title text-gradient">Get In Touch</h2>
-                 <p class="max-w-2xl mx-auto text-lg mb-8">
-                     I'm currently seeking internship opportunities where I can apply my skills and contribute to exciting projects. Feel free to reach out if you'd like to connect!
-                 </p>
-                 <a href="mailto:arshiyaanjumshaik5@gmail.com" class="inline-block bg-indigo-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 shadow-lg hover:shadow-indigo-300">
-                     arshiyaanjumshaik5@gmail.com
-                 </a>
-                 <div class="flex justify-center gap-6 mt-8">
-                     <a href="https://github.com/Arshiya02" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-indigo-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                     </a>
-                     <a href="http://www.linkedin.com/in/shaik-arshiya-anjum-281753363" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-indigo-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                     </a>
-                     <a href="https://www.credly.com/users/arshiya-anjum-shaik/badges" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-indigo-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15l-3.5-3.5 1.5-1.5 2 2 4-4L18 9.5z"/><path d="M15 12c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3 3 1.3 3 3z"/><path d="M2 12C2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 10-10 10S2 17.5 2 12z"/></svg>
-                     </a>
+        <!-- Education Section -->
+        <section id="education" class="bg-white py-20">
+             <div class="container mx-auto px-6">
+                 <h2 class="section-title text-slate-900">Education</h2>
+                 <div class="max-w-3xl mx-auto bg-gray-50 p-8 rounded-lg shadow-lg border-l-4 border-blue-500">
+                     <h3 class="text-2xl font-bold text-slate-800">B.Tech in Computer Science</h3>
+                     <p class="text-lg font-medium text-slate-600">Mohan Babu University, Andhra Pradesh</p>
+                     <p class="mt-2 text-xl font-bold text-blue-600">CGPA: 9.84 <span class="text-base font-medium text-slate-500">(Department Topper)</span></p>
                  </div>
-            </div>
+             </div>
         </section>
+
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
+    <footer id="contact" class="bg-slate-800 text-white py-16">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2024 Shaik Arshiya Anjum. All Rights Reserved.</p>
+            <h2 class="text-3xl font-bold">Get In Touch</h2>
+            <p class="mt-4 max-w-xl mx-auto text-slate-300">I'm currently seeking new opportunities and would love to hear from you. Whether you have a question or just want to connect, feel free to reach out!</p>
+            <a href="mailto:arshiyaanjumshaik5@gmail.com" class="mt-8 inline-block bg-blue-600 text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg">
+                Say Hello
+            </a>
+            <div class="mt-12 flex justify-center space-x-8">
+                 <a href="https://github.com/Arshiya02" target="_blank" class="text-4xl text-slate-300 hover:text-white transition duration-300"><i class="fab fa-github"></i></a>
+                 <a href="https://www.linkedin.com/in/shaik-arshiya-anjum-281753363" target="_blank" class="text-4xl text-slate-300 hover:text-white transition duration-300"><i class="fab fa-linkedin"></i></a>
+                 <a href="mailto:arshiyaanjumshaik5@gmail.com" class="text-4xl text-slate-300 hover:text-white transition duration-300"><i class="fas fa-envelope"></i></a>
+            </div>
+             <div class="mt-12 border-t border-slate-700 pt-8">
+                <p class="text-slate-400">Designed & Built by Shaik Arshiya Anjum</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        // JavaScript for mobile menu toggle
+        // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
         // Close mobile menu when a link is clicked
-        const navLinks = document.querySelectorAll('#mobile-menu a');
-        navLinks.forEach(link => {
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
 
-        // Scroll Reveal Animation
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
+        // Sticky header background change on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-xl');
+            } else {
+                header.classList.remove('shadow-xl');
+            }
         });
-
-        revealElements.forEach(elem => {
-            revealObserver.observe(elem);
-        });
-
-        // Typed.js Animation for Headline
-        document.addEventListener('DOMContentLoaded', function() {
-            var options = {
-                strings: ['Aspiring Tech Enthusiast with Gen AI and Cloud Expertise'],
-                typeSpeed: 50,
-                backSpeed: 25,
-                backDelay: 1500,
-                startDelay: 500,
-                loop: false,
-                showCursor: true,
-                cursorChar: '|',
-            };
-            var typed = new Typed('#typed-headline', options);
-        });
-
-        // Vanilla-Tilt.js for 3D card effect
-        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-            max: 15,
-            speed: 400,
-            perspective: 1000,
-        });
-
     </script>
 </body>
 </html>
+
 
